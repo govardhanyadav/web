@@ -1,0 +1,18 @@
+pipeline{
+agent any
+stages{
+stage
+{
+step()
+git clone
+}
+stage(build)
+sh "mvn clean package"
+sh "mv target/*.war target/web.war
+}
+stage(deploy)
+step()
+{
+scp 
+}
+}
